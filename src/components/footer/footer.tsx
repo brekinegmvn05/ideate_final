@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+
 import logo from "./icons/Black-Dominated.png";
 import Ilogo from "./icons/instagram.png";
 import Llogo from "./icons/linkedin.png";
@@ -11,6 +13,15 @@ interface FooterProps {
 }
 
 const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  const handleHover = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
   const instgram =
     "https://www.instagram.com/ideate.solutions/?igsh=NDN0Ync1MDh1dTNx&utm_source=qr";
   const facebook = "https://www.facebook.com/ideatesolutions.studio";
@@ -140,7 +151,14 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </div>
           <div className="flex flex-row gap-2 mt-10">
             <p className="text font font-lato ">@ideate 2021</p>
-            <p className="text font-semibold font-lato ">CONTACT US</p>
+            <p
+              className="text font-semibold font-lato select-none cursor-pointer "
+              onMouseEnter={handleHover}
+              onMouseLeave={handleMouseLeave}
+              onClick={onNavigate}
+            >
+              CONTACT US
+            </p>
           </div>
         </div>
         <div className="hidden lg:flex flex-row justify-between">
@@ -166,7 +184,12 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         <div className="hidden lg:flex flex-row justify-between">
           <div className="flex flex-row gap-3">
             <p className="text font font-lato ">@ideate 2021</p>
-            <p className="text font-semibold font-lato " onClick={onNavigate}>
+            <p
+              className="text font-semibold font-lato select-none cursor-pointer"
+              onMouseEnter={handleHover}
+              onMouseLeave={handleMouseLeave}
+              onClick={onNavigate}
+            >
               CONTACT US
             </p>
           </div>
@@ -174,6 +197,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             {/* <img src={logo} alt="Logo" className="h-5" />
             <img src={logo} alt="Logo" className="h-5" />
             <img src={logo} alt="Logo" className="h-5" /> */}
+            S
             <img
               src={Flogo}
               onClick={handleClickF}
