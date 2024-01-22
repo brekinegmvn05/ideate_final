@@ -197,7 +197,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             {/* <img src={logo} alt="Logo" className="h-5" />
             <img src={logo} alt="Logo" className="h-5" />
             <img src={logo} alt="Logo" className="h-5" /> */}
-            S
+
             <img
               src={Flogo}
               onClick={handleClickF}
