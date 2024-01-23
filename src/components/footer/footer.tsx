@@ -129,24 +129,24 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             {" "}
             Davao City, PH 8000
           </p>
-          <div className="flex flex-row gap-2 mt-1">
+          <div className="flex flex-row gap-2 mt-1 ">
             <img
               src={Flogo}
               onClick={handleClickF}
               alt="Logo"
-              className="h-5"
+              className="h-5 cursor-pointer"
             />
             <img
               src={Ilogo}
               onClick={handleClickI}
               alt="Logo"
-              className="h-5"
+              className="h-5 cursor-pointer"
             />
             <img
               src={Llogo}
               onClick={handleClickL}
               alt="Logo"
-              className="h-5"
+              className="h-5 cursor-pointer"
             />
           </div>
           <div className="flex flex-row gap-2 mt-10">
@@ -202,19 +202,19 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               src={Flogo}
               onClick={handleClickF}
               alt="Logo"
-              className="h-5"
+              className="h-5 cursor-pointer"
             />
             <img
               src={Ilogo}
               onClick={handleClickI}
               alt="Logo"
-              className="h-5"
+              className="h-5 cursor-pointer"
             />
             <img
               src={Llogo}
               onClick={handleClickL}
               alt="Logo"
-              className="h-5"
+              className="h-5 cursor-pointer"
             />
             {/* <motion.div ref={constraintsRef}>
               <motion.div drag dragConstraints={constraintsRef} />

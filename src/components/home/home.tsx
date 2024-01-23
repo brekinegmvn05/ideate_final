@@ -40,17 +40,15 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate1, onNavigate }) => {
 				</div>
 			</div> */}
       <div className="flex flex-col  mb-24 mx-auto lg:max-w-screen-xl lg:mt-20 lg:mb-72   ">
-        <div className="flex justify-end ">
-          <MdMenu
-            className="text-white text-5xl cursor-pointer me-2 lg:hidden"
-            onClick={toggleMenu}
-          />
-        </div>
-        <div className="flex flex-row justify-between px-2 ">
+        <div className="flex flex-row py-3 justify-between px-2 ">
           <img
             src={logo}
             alt="Static Icon"
             className=" w-20 ms-5 sm:ms-10 lg:hidden mb-24 "
+          />
+          <MdMenu
+            className="text-white text-5xl right-5 cursor-pointer me-2 lg:hidden"
+            onClick={toggleMenu}
           />
         </div>
 

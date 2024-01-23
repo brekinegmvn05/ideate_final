@@ -74,7 +74,7 @@ const ITeam = () => {
                 }`}
               >
                 <h2 className="text-3xl xl:text-5xl xl:mt-6 text-center font-bold font-general-sans text-white">
-                  ELI
+                  QUENNIE
                 </h2>
                 <p className="text-sm xl:text-base text-center font-lato text-white">
                   Marketing Manager
