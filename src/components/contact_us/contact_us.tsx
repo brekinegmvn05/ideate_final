@@ -198,7 +198,7 @@ const ContactForm: React.FC<ContactUseProps> = ({
 
         <div className="flex flex-col font-lato  w-full lg:gap-72 lg:flex-row ">
           <div className="flex flex-col gap-1">
-            <p className="text-xl font-bold ">hello@idetasolutions.tech</p>
+            <p className="text-xl font-bold ">hello@ideatesolutions.studio</p>
             <p className="text-xl">09178083327</p>
             {/* <p className="text-xl">(082) 123 1234</p> */}
           </div>
