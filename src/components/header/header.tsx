@@ -71,7 +71,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate1 }) => {
               {" "}
               <img
                 src={ideate}
-                className="mt-4 h-auto max-w-max"
+                className="mt-4 h-auto max-w-max cursor-pointer"
                 alt="image description"
                 onClick={(e) => {
                   e.preventDefault();

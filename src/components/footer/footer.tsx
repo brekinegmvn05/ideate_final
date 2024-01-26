@@ -116,7 +116,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <hr className="h-px mt-16 bg-gray-200 border-0 dark:bg-gray-700"></hr>
         </div>
 
-        <div className="flex flex-col justify-center  items-center lg:hidden">
+        <div className="flex flex-col justify-center items-center lg:hidden">
           <img src={logo} alt="Logo" className="w-12" />
           {/* <p className="text-4xl font-bold font-general-sans mt-3"> ideate</p> */}
 

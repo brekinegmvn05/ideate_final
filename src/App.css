@@ -13,6 +13,7 @@
   }
 }
 
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -36,6 +37,12 @@
     transform: rotate(360deg);
   }
 } */
+@media (max-height: 750px) {
+  .mb-height {
+    /* Custom class name */
+    margin-bottom: 25rem; /* Example margin, adjust as needed */
+  }
+}
 
 .bg-image {
   background-image: url("./images/bg.jpg") !important;
@@ -112,5 +119,3 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #149c31;
 }
-
-
