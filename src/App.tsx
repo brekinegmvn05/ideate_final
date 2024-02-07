@@ -107,16 +107,7 @@ function App() {
         </div>
         {/* <ReactQueryDevtools initialIsOpen={false} /> */}
       </QueryClientProvider>
-      <Analytics
-        beforeSend={(e) => {
-          const url = new URL(e.url);
-          url.searchParams.delete("secret");
-          return {
-            ...e,
-            url: url.toString(),
-          };
-        }}
-      />
+      <Analytics debug={false} />
     </>
 
     // <Router>
