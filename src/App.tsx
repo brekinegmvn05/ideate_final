@@ -17,6 +17,7 @@ import BGS from "./components/projects/testingproject";
 import Proj_Details from "./components/projects_details/project_details";
 import ITeam from "./components/team/team";
 import Error from "./components/error/error";
+import { Analytics } from "@vercel/analytics/react";
 
 // function useScrollToTop() {
 //   const location = useLocation();
@@ -66,45 +67,57 @@ function App() {
   };
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <div className="App ">
-        <Header currentPage={currentPage} onNavigate1={onNavigate1} />
-        {currentPage === "Home" && (
-          <>
-            {/* <Error /> */}
-            <HomePage
-              onNavigate1={onNavigate1}
-              onNavigate={navigateToContactUs}
-            />
+    <>
+      <QueryClientProvider client={queryClient}>
+        <div className="App ">
+          <Header currentPage={currentPage} onNavigate1={onNavigate1} />
+          {currentPage === "Home" && (
+            <>
+              {/* <Error /> */}
+              <HomePage
+                onNavigate1={onNavigate1}
+                onNavigate={navigateToContactUs}
+              />
 
-            {/* Other components */}
+              {/* Other components */}
 
-            <BGS onNavigate={navigateToProjDetails} />
-            {/* <Proj_Details /> */}
-            <ITeam />
-          </>
-        )}
-        {currentPage === "ContactUs" && (
-          <>
-            <ContactForm
-              onNavigate1={onNavigate1}
-              onNavigate={navigateToContactUs}
-            />
-          </>
-        )}
-        {currentPage === "ProjDetails" && (
-          <>
-            <Proj_Details
-              onNavigate1={onNavigate1}
-              onNavigate={navigateToContactUs}
-            />
-          </>
-        )}
-        <Parallexxx />
-        <Footer onNavigate={navigateToContactUs} />
-      </div>
-      {/* <ReactQueryDevtools initialIsOpen={false} /> */}
-    </QueryClientProvider>
+              <BGS onNavigate={navigateToProjDetails} />
+              {/* <Proj_Details /> */}
+              <ITeam />
+            </>
+          )}
+          {currentPage === "ContactUs" && (
+            <>
+              <ContactForm
+                onNavigate1={onNavigate1}
+                onNavigate={navigateToContactUs}
+              />
+            </>
+          )}
+          {currentPage === "ProjDetails" && (
+            <>
+              <Proj_Details
+                onNavigate1={onNavigate1}
+                onNavigate={navigateToContactUs}
+              />
+            </>
+          )}
+          <Parallexxx />
+          <Footer onNavigate={navigateToContactUs} />
+        </div>
+        {/* <ReactQueryDevtools initialIsOpen={false} /> */}
+      </QueryClientProvider>
+      <Analytics
+        beforeSend={(e) => {
+          const url = new URL(e.url);
+          url.searchParams.delete("secret");
+          return {
+            ...e,
+            url: url.toString(),
+          };
+        }}
+      />
+    </>
 
     // <Router>
     //   <div className="App">
